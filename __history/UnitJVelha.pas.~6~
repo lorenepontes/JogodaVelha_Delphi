@@ -1,0 +1,181 @@
+unit UnitJVelha;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation;
+
+type
+  TFrmJVelha = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    BtA1: TButton;
+    BtB1: TButton;
+    BtC1: TButton;
+    BtA2: TButton;
+    BtB2: TButton;
+    BtC2: TButton;
+    BtA3: TButton;
+    BtB3: TButton;
+    BtC3: TButton;
+    procedure BtA1Click(Sender: TObject);
+    procedure Verificajogada;
+    procedure BtB1Click(Sender: TObject);
+    procedure BtC1Click(Sender: TObject);
+    procedure BtA2Click(Sender: TObject);
+    procedure BtA3Click(Sender: TObject);
+    procedure BtB2Click(Sender: TObject);
+    procedure BtB3Click(Sender: TObject);
+    procedure BtC2Click(Sender: TObject);
+    procedure BtC3Click(Sender: TObject);
+    procedure VerificaJogo;
+    procedure recomeca;
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmJVelha: TFrmJVelha;
+  jogou: string;
+  botao: string;
+  a1,a2,a3,b1,b2,b3,c1,c2,c3: string;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmJVelha.BtA1Click(Sender: TObject);
+begin
+   Verificajogada;
+   Self.BtA1.Text := jogou;
+   Self.BtA1.Enabled := false;
+   a1 := jogou;
+   VerificaJogo;
+
+end;
+
+
+procedure TFrmJVelha.BtA2Click(Sender: TObject);
+begin
+   Verificajogada;
+   Self.BtA2.Text := jogou;
+   Self.BtA2.Enabled := false;
+   a2 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtA3Click(Sender: TObject);
+begin
+   Verificajogada;
+   Self.BtA3.Text := jogou;
+   Self.BtA3.Enabled := false;
+   a3 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtB1Click(Sender: TObject);
+begin
+  Verificajogada;
+   Self.BtB1.Text := jogou;
+   Self.BtB1.Enabled := false;
+   b1 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtB2Click(Sender: TObject);
+begin
+  Verificajogada;
+   Self.BtB2.Text := jogou;
+   Self.BtB2.Enabled := false;
+   b2 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtB3Click(Sender: TObject);
+begin
+   Verificajogada;
+   Self.BtB3.Text := jogou;
+   Self.BtB3.Enabled := false;
+   b3 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtC1Click(Sender: TObject);
+begin
+   Verificajogada;
+   Self.BtC1.Text := jogou;
+   Self.BtC1.Enabled := false;
+   c1 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtC2Click(Sender: TObject);
+begin
+       Verificajogada;
+   Self.BtC2.Text := jogou;
+   Self.BtC2.Enabled := false;
+   c2 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.BtC3Click(Sender: TObject);
+begin
+   Verificajogada;
+   Self.BtC3.Text := jogou;
+   Self.BtC3.Enabled := false;
+   c3 := jogou;
+   VerificaJogo;
+end;
+
+procedure TFrmJVelha.Verificajogada;
+begin
+  //
+  if jogou = '' then
+   begin
+    jogou := 'X';
+   end;
+
+  if jogou = 'X' then
+    jogou := 'O'
+     else
+     jogou := 'X';
+
+
+
+
+end;
+
+procedure TFrmJVelha.VerificaJogo;
+var
+f: integer;
+begin
+f:= 1;
+
+  //   verifica jogadas
+
+   if (a1 = 'X') and (a2 = 'X') and (a3 ='X') then
+    begin
+     ShowMessage('X ganhou');
+    end else
+     if (a1 = 'O') and (a2 = 'O') and (a3 ='O') then
+    begin
+     ShowMessage('O ganhou');
+
+    end;
+
+end;
+
+
+procedure TFrmJVelha.recomeca;
+begin
+  //
+end;
+
+
+end.

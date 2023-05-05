@@ -1,0 +1,13 @@
+object FrmJVelha: TFrmJVelha
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'Jogo da Velha'
+  ClientHeight = 373
+  ClientWidth = 300
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+end
